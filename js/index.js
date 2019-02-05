@@ -18,9 +18,9 @@ const eventList = [
   function eventLogger(eventObject) {
     const { type, target, currentTarget, shiftKey } = eventObject;
 
-    shiftKey
-        ? document.body.style.backgroundColor = 'blue'
-        : document.body.style.backgroundColor = 'Lavender';
+    // shiftKey
+    //     ? document.body.style.backgroundColor = 'blue'
+    //     : document.body.style.backgroundColor = 'Lavender';
     
   
     console.log(`-> ${type} event <-
