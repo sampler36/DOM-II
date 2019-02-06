@@ -1,16 +1,16 @@
 // Your code goes here
 const eventList = [
-  "mouseover",
-  "mousemove",
-  "drag",
-  "wheel",
+  "mouseover", // done
+  "mousemove", // done
+  "drag", // done
+  "wheel", // done
   "keydown",
   "keyup",
   "load",
-  "resize",
+  "resize", // done
   "scroll",
   "focus",
-  "dblclick"
+  "dblclick" // done
 ];
 let busimg = document.querySelector(".busimg");
 busimg.addEventListener("mouseover", function() {
