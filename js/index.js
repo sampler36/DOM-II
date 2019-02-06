@@ -1,41 +1,39 @@
 // Your code goes here
 const eventList = [
-  
-    'mouseover',
-    'mousemove',
-    'drag',
-    'drop',
-    'keydown',
-    'keyup',
-    'load',
-    'resize',
-    'scroll',
-    'focus',
-    'dblclick',
-  ];
-  
-  // getting a callback function ready
-  function eventLogger(eventObject) {
-    const { type, target, currentTarget, shiftKey } = eventObject;
+  "mouseover",
+  "mousemove",
+  "drag",
+  "wheel",
+  "keydown",
+  "keyup",
+  "load",
+  "resize",
+  "scroll",
+  "focus",
+  "dblclick"
+];
+let busimg = document.querySelector(".busimg");
+busimg.addEventListener("mouseover", function() {
+  this.style.border = "3px solid grey";
+});
 
-    // shiftKey
-    //     ? document.body.style.backgroundColor = 'blue'
-    //     : document.body.style.backgroundColor = 'Lavender';
-    
-  
-    console.log(`-> ${type} event <-
-     currentTarget: ${currentTarget && currentTarget.nodeName} 💥
-        (event target: ${target && target.nodeName})
-      `);
-  }
-  
-  const allElements = Array.from(document.getElementsByTagName('*'));
-  
-  allElements.forEach((element) => {
-    eventList.forEach((event) => {
-      element.addEventListener(event, eventLogger);
-    });
-  });
+let letsgo = document.querySelector(".letsgo");
+letsgo.addEventListener("mousemove", (event) => {
+  event.target.style.color = "green";
+});
 
-  
-  
+let head = document.querySelector(".head");
+head.addEventListener("dblclick", (event) => {
+  event.target.style.fontSize = "38px";
+});
+
+let dontleave = document.querySelector(".dontleave");
+        if (dontleave.addEventListener) {
+        dontleave.addEventListener("wheel", myFunction);
+        } else if (dontleave.attachEvent) {
+            dontleave.attachEvent("focus", myFunction);
+        }
+              function myFunction() {
+               alert("Sign Up below");
+        }
+
