@@ -14,7 +14,7 @@ const eventList = [
 ];
 let busimg = document.querySelector(".busimg");
 busimg.addEventListener("mouseover", function() {
-  this.style.border = "3px solid grey";
+  this.style.border = "2px solid green";
 });
 
 let letsgo = document.querySelector(".letsgo");
@@ -22,12 +22,16 @@ letsgo.addEventListener("mousemove", (event) => {
   event.target.style.color = "green";
 });
 
+let pull = document.querySelector(".d");
+pull.addEventListener("drag", (event) => {
+  event.target.style.size = "3px";
+});
 let head = document.querySelector(".head");
 head.addEventListener("dblclick", (event) => {
   event.target.style.fontSize = "38px";
 });
 
-let dontleave = document.querySelector(".dontleave");
+let dontleave = document.querySelector(".bigBtn");
         if (dontleave.addEventListener) {
         dontleave.addEventListener("wheel", myFunction);
         } else if (dontleave.attachEvent) {
